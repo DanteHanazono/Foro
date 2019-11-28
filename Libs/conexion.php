@@ -7,7 +7,7 @@ class conexion{
 			if ($_SERVER["HTTP_HOST"] == "localhost") {
 				$this->con = new PDO("mysql:host=localhost;dbname=bd_foro", "root", "");
 			}else{
-				$this->con = new PDO("mysql:host=localhost;dbname=id11483455_bd_foro", "id11483455_samueldlh", "crazygod1002");
+				$this->con = new PDO("mysql:host=localhost:3306;dbname=bd_foro", "DanteHanazono", "Rhady_0611Sae_1010");
 				$this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			}
 		} catch(Exception $e){
