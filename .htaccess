@@ -1,5 +1,5 @@
 RewriteEngine on
-Options All -Indexes
+# Options All -Indexes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /FORO [NC.L,QSA]
+# RewriteRule ^(.*)$ /FORO [NC.L,QSA]
