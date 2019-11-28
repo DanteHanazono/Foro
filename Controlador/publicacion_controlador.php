@@ -40,7 +40,7 @@ class publicacion_controlador{
 			$rta = publicacion_modelo::mdlEliminar($id);
 			header("Location:?controlador=publicacion&accion=index&id=".$catID);
 		}else{
-			header("Location: /FORO");
+			header("Location: /");
 		}
 		extract($_REQUEST);
 		
