@@ -8,9 +8,9 @@ class conexion{
 				$this->con = new PDO("mysql:host=localhost;dbname=bd_foro", "root", "");
 			}else{
 				$this->con = new PDO("mysql:host=localhost:3306;dbname=rslopez0611", "DanteHanazono", "Sae_1010Rhady_0611");
-				$this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			}
-		} catch(Exception $e){
+			$this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		}catch(Exception $e){
 			echo "Error al conectarse:" .$e -> getMessage();
 		}
 	}
