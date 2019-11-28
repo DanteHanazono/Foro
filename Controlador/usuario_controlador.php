@@ -87,7 +87,7 @@ class usuario_controlador{
 			if ($_SERVER["HTTP_HOST"] == "localhost") {
 				$url = "http://localhost/FORO";
 			}else{
-				$url = "https://foro-samuel.000webhostapp.com/FORO";
+				$url = "https://foro.sit.moe/";
 			}
 			$icono = "";
 		}else{
