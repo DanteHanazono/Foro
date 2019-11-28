@@ -29,7 +29,7 @@
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-       <a class="nav-link" href="/FORO">Inicio<span class="sr-only">(current)</span></a>
+       <a class="nav-link" href="https://foro.sit.moe/">Inicio<span class="sr-only">(current)</span></a>
      </li>
      <li class="nav-item">
       <?php if (isset($_SESSION["USU_ID"])) { 
