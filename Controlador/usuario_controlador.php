@@ -98,8 +98,8 @@ class usuario_controlador{
 		}
 		echo json_encode(array("mensaje" => $this->vista->mensaje,
 			"estado" => $estado,
-			"icono" => $icono),
-		    "url" => $url;);
+			"icono" => $icono,
+		    "url" => $url));
 	}
 
 	public function cerrar(){
