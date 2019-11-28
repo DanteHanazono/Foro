@@ -20,7 +20,7 @@
 			if(isset($_SESSION["USU_ID"])) {
 				if($_SESSION["USU_ID"] == $valor["USU_ID"] || $_SESSION["USU_ROL"] == 1){
 					echo '<a href="#" class="card-link">Editar</a>';
-					echo '<a href="?controlador=publicacion&accion=eliminar&id='.$valor["PUB_ID"].'&catID='.$_REQUEST["id"].'" class="card-link")>Eliminar</a>';
+					echo '<a href="?controlador=publicacion&accion=eliminar&id='.$valor["PUB_ID"].'&catID='.$_REQUEST["id"]."' onclick='return confirm(\"Esta seguro que desea eliminar?\")'>Eliminar</a>";
 				}
 			}
 			echo '</div>';
