@@ -5,9 +5,9 @@ class conexion{
 	public function __construct() {
 		try{
 			if ($_SERVER["HTTP_HOST"] == "localhost") {
-				$this->con = new PDO("mysql:host=localhost:3306;dbname=bd_foro", "root", "");
+				$this->con = new PDO("mysql:host=localhost;dbname=bd_foro", "root", "");
 			}else{
-				$this->con = new PDO("mysql:host=localhost:3306;dbname=bd_foro", "DanteHanazono", "Sae_1010Rhady_0611");
+				$this->con = new PDO("mysql:host=localhost:3306;dbname=rslopez0611", "DanteHanazono", "Sae_1010Rhady_0611");
 				$this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			}
 		} catch(Exception $e){
