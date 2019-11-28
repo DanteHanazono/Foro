@@ -109,7 +109,6 @@ $(function(){
 	$("#frmCComentario").submit(function(){
 		var url = $(this).attr("action");
 		var datos = $(this).serialize();
-
 		$.post(url, datos, function(e){
 			$('#exampleModal').modal('toggle');
 			$.notify({
@@ -122,8 +121,15 @@ $(function(){
 				setTimeout("document.location.reload()", 3000);
 			}
 		},"json");
-
 		return false;
+	});
 
+	$(".editar").click(function(){
+		var titulo = $(this).attr("data-titulo");
+		var contenido = $(this).attr("data-contenido");
+		var pub_id = $(this).attr("data-pub_id");
+		$("#titulo1").val(titulo);
+		$("#contenido1").val(contenido);
+		$("#pub_id").val(pub_id);
 	});
 });
