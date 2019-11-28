@@ -11,15 +11,16 @@
 		foreach ($this->datos as $valor) {
 			echo '<div class="card">
 			<div class="card-body">
-
-			<h5 class="card-title"><a href="?controlador=comentario&accion=index&id='
-			.$valor["PUB_ID"].'">'.utf8_decode($valor["PUB_TITULO"]).'</a></h5>
-
+			<h5 class="card-title"><a href="?controlador=comentario&accion=index&id=' .$valor["PUB_ID"].'">'.utf8_decode($valor["PUB_TITULO"]).'</a></h5>
 			<h6 class="card-subtitle mb-2 text-muted">'.$valor["USU_NICK"].'</h6>
 			<h6 class="card-subtitle mb-2 text-muted">'.$valor["USU_FCH_RGT"].'</h6>';
 			if(isset($_SESSION["USU_ID"])) {
 				if($_SESSION["USU_ID"] == $valor["USU_ID"] || $_SESSION["USU_ROL"] == 1){
-					echo '<a href="#" class="card-link" data-toggle="modal" data-target="#editarmodal"> Editar</a>';
+					echo '<a href="#" class="card-link" data-toggle="modal" data-target="#editarmodal"
+					data-titulo="' .$valor["PUB_TITULO"].'"
+					data-contenido="' .$valor["PUB_DESCRIPCION"].'"
+					data-pub_id="' .$valor["PUB_ID"].'"
+					> Editar</a>';
 					echo '<a href="?controlador=publicacion&accion=eliminar&id='.$valor["PUB_ID"].'&catID='.$_REQUEST["id"].'" class="card-link")>Eliminar</a>';
 				}
 			}
