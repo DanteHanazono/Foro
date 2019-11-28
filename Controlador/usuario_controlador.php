@@ -104,7 +104,7 @@ class usuario_controlador{
 
 	public function cerrar(){
 		session_destroy();
-		header("Location: /FORO");
+		header("Location: /");
 	}
 
 	public function eliminar(){
