@@ -133,3 +133,21 @@ $(function(){
 		$("#pub_id").val(pub_id);
 	});
 });
+$("#frmEPublicacion").submit(function(){
+	var url = $(this).attr("action");
+	var datos = $(this).serialize();
+
+	$.post(url, datos, function(e){
+		$('#editarmodal').modal('toggle');
+		$.notify({
+			icon: e.icono,
+			message: e.mensaje 
+		},{
+			type: e.estado 
+		});
+		if (e.estado == "success") {
+			setTimeout("document.location.reload()", 3000);
+		}
+	},"json");
+	return false;
+});

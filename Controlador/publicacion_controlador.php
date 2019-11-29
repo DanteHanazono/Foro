@@ -31,7 +31,6 @@ class publicacion_controlador{
 		echo json_encode(array("mensaje" => $this->vista->mensaje,
 			"estado" => $estado,
 			"icono" => $icono));
-
 	}
 
 	public function eliminar(){
@@ -42,8 +41,13 @@ class publicacion_controlador{
 		}else{
 			header("Location: /");
 		}
-		extract($_REQUEST);
-		
+		//extract($_REQUEST);
 	}
-
+	public function editarPublicacion(){
+		extract($_REQUEST);
+		$datos["titulo"] = $titulo1;
+		$datos["contenido"] = $contenido1;
+		$datos["id"] = $pub_id;
+		var_dump($_REQUEST);
+	}
 }
