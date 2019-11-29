@@ -83,7 +83,7 @@
 					</div>
 					<div class="modal-footer">
 						<input type="hidden" name="id1" value="<?php echo $_REQUEST["id"]; ?>">
-						<input type="hidden" name="PUB_ID">
+						<input type="hidden" name="PUB_ID" id="PUB_ID">
 						<button type="button" name="aceptar"class="btn btn-danger" data-dismiss="modal">Cancelar</button>
 						<button type="submit" class="btn btn-success">Publicar</button>
 					</div>

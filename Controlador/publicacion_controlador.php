@@ -29,8 +29,8 @@ class publicacion_controlador{
 			$icono = "ti-close";
 		}
 		echo json_encode(array("mensaje" => $this->vista->mensaje,
-			"estado" => $estado,
-			"icono" => $icono));
+		"estado" => $estado,
+		"icono" => $icono));
 	}
 
 	public function eliminar(){
@@ -48,6 +48,18 @@ class publicacion_controlador{
 		$datos["titulo"] = $titulo1;
 		$datos["contenido"] = $contenido1;
 		$datos["id"] = $pub_id;
-		var_dump($_REQUEST);
+		$r = publicacion_modelo::mdlEditar($datos);
+		if ($r > 0) {
+			$this->vista->mensaje = "Publicacion editada";
+			$estado = "success";
+			$icono = "ti-thumb-up";
+		}else{	
+			$this->vista->mensaje = "Error al editar";
+			$estado = "danger";
+			$icono = "ti-close";
+		}
+		echo json_encode(array("mensaje" => $this->vista->mensaje,
+		"estado" => $estado,
+		"icono" => $icono));
 	}
 }

@@ -44,7 +44,12 @@ class publicacion_modelo{
 		$sql = "DELETE FROM t_publicacion WHERE PUB_ID = :id";
 		$s = $c->prepare($sql);
 		return $s->execute(array("id" => $id));
-		
 	}
-
+	public static function mdlEditar($datos){
+		$bd = new conexion();
+		$c = $bd->conectarse();
+		$sql = array("PUB_TITULO"  => $datos["titulo"], "PUB_DESCRIPCION"  => $datos["contenido"]);
+		$rta = $bd->actualizar($c, "t_publicacion", $sql, "WHERE PUB_ID = ".$datos["id"]);
+		return $rta;
+	}
 }
