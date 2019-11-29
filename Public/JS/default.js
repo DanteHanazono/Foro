@@ -132,7 +132,6 @@ $(function(){
 		$("#contenido1").val(contenido);
 		$("#pub_id").val(pub_id);
 	});
-});
 $("#frmEPublicacion").submit(function(){
 	var url = $(this).attr("action");
 	var datos = $(this).serialize();
@@ -151,3 +150,4 @@ $("#frmEPublicacion").submit(function(){
 	},"json");
 	return false;
 });
+});//ultimo
