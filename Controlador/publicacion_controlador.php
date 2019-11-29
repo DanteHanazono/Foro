@@ -60,6 +60,6 @@ class publicacion_controlador{
 		}
 		echo json_encode(array("mensaje" => $this->vista->mensaje,
 		"estado" => $estado,
-		"icono" => $icono));
+		"icono" => $icono)); 
 	}
 }
